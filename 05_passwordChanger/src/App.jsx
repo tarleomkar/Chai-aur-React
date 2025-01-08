@@ -1,5 +1,10 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8ba04309f0cc7472f9adfafe0ebefe937500613c
 function App() {
   const [length, setLength] = useState(8)
   const [numberAllowed, setNumberAllowed] = useState(false);

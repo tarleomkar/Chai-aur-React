@@ -5,9 +5,12 @@ import './App.css'
 import Card from './components/Card'
 import Exercise from './components/Exercise'
 import Shoes from './components/Shoes'
+<<<<<<< HEAD
 // MY own Component
 import ParentComponent from './components/ParentComponent'
 import { Component } from 'react'
+=======
+>>>>>>> 8ba04309f0cc7472f9adfafe0ebefe937500613c
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,7 +31,10 @@ function App() {
     <Card username="Omkar" btnText="visit me"/>
     <Exercise brand="Mahindra 3X0"/>
     <Shoes />
+<<<<<<< HEAD
     <ParentComponent />
+=======
+>>>>>>> 8ba04309f0cc7472f9adfafe0ebefe937500613c
     </>
   )
 }
