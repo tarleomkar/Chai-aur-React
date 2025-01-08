@@ -12,11 +12,10 @@ function App() {
   const addValue = () => {
     // console.log("valued added", Math.random());
     // counter = counter + 1;
-    // setCounter(counter + 1);
-    // console.log("clikced", counter);
-    if(counter < 20) {
-      setCounter(counter + 1);
-    }
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
+    setCounter(prevCounter => prevCounter + 1);
   }
 
   const removeValue = () => {
