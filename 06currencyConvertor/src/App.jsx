@@ -59,9 +59,9 @@ function App() {
               >
                 Swap5
               </button>
-            </div>
+            </div> 
             <div className="w-full mt-1 mb-4">
-              <InputBox
+              <InputBox 
                 label="To"
                 amount={convertedAmount}
                 currencyOptions={options}
