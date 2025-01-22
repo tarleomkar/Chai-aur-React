@@ -1,32 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import { useEffect } from 'react';
+import React from 'react'
+import Example1 from './components/Example1'
+import Example2 from './components/Example2'
+import Example3 from './components/Example3'
 
-function App() {
-  const [count, setCount] = useState(0);
-  let val = 1;
-
-  function handleIncrement() {
-    val = val + 1;
-    console.log("Value of val: ", val);
-    setCount(count + 1);
-  }
-
-  // It runs on every render
-  useEffect(() => {
-    console.log("Main ferse render gogaya hu");
-  })
-
+const App = () => {
   return (
     <div>
-      <button onClick={handleIncrement}>
-        Increment
-      </button>
-      <br />
-
-      <div>
-        Count: {count}
-      </div>
+      {/* <Example1/> */}
+      {/* <Example2/> */}
+      <Example3/>
     </div>
   )
 }
