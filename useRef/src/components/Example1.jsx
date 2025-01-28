@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import  { useRef, useState } from 'react'
 
 const Example1 = () => {
     const currentRef = useRef(0);
