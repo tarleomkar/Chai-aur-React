@@ -8,7 +8,7 @@ const Example6 = () => {
     });
 
     const handle = () => {
-        count.current = count.current + 1 
+        count.current = count.current + 1;
         console.log(`Clicked ${count.current } times`);
     }
 
