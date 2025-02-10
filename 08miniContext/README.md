@@ -246,6 +246,10 @@ export default App
 - 🎨 Improve UI with TailwindCSS or Material-UI
 - 🌍 Multi-language support
 
+# Work Demo
+![Vite + React - Brave 10-02-2025 14_20_04](https://github.com/user-attachments/assets/330f2ffa-7f41-429e-8e36-a3f3755ff134)
+
+
 ## Conclusion
 The React Context API is a powerful tool for managing global state in a React application without prop drilling. It works best for scenarios like themes, authentication, and user preferences. However, for more complex state management, external libraries like Redux might be a better choice.
 
