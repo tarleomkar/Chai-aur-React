@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <UserContextProvider>
-    <h1>React with Chai and Share is imp</h1>
+    <h1>React with Chai</h1>
     <Login />
     <Profile />
     </UserContextProvider>
