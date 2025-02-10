@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-color: #3b82f6; /* Default */
+}
+
+.theme-red {
+  --primary-color: #ef4444;
+}
+
+.theme-green {
+  --primary-color: #22c55e;
+}
+
+.theme-black {
+  --primary-color: #171717;
+}
+
+.theme-yellow {
+  --primary-color: #ccc73f;
+}
+
+body {
+  background-color: var(--primary-color);
+}
