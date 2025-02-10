@@ -33,15 +33,28 @@ export default UserContext;
 This component wraps the app and provides the user state.
 
 ```jsx
-import React, { useState } from "react";
-import UserContext from "./UserContext";
+import {useEffect, useState} from "react";
+import UserContext from "./UserContext.js";
 
 const UserContextProvider = ({ children }) => {
-    const [user, setUser] = useState(null); // Store user data
+    // Loading user from localStorage (if available)
+    const [user, setUser] = useState(() => {
+        const savedUser = localStorage.getItem("user");
+        return savedUser ? JSON.parse(savedUser) : null;
+    });
+
+    // saving user to localstorage when it changes
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem("user", JSON.stringify(user));
+        } else {
+            localStorage.removeItem("user"); // Remove from localstorage on logout 
+        }
+    }, [user])
 
     return (
         <UserContext.Provider value={{ user, setUser }}>
-            {children} {/* Renders the app inside provider */}
+            {children}
         </UserContext.Provider>
     );
 };
@@ -108,18 +121,24 @@ export default Login;
 This component displays the logged-in user or asks them to log in.
 
 ```jsx
-import React, { useContext } from 'react'
+import {useContext} from 'react'
 import UserContext from '../context/UserContext'
 
 const Profile = () => {
-    const { user } = useContext(UserContext) // Access user from context
+    const {user, setUser } = useContext(UserContext)
     
     if (!user) return <div>Please Login</div>
 
-    return <div>Welcome {user.username}</div>
+    return (
+        <div>
+            <h3>Welcome {user.username}</h3>
+            <button onClick={() => setUser(null)}>Logout</button>
+        </div>
+    )
+    
 }
 
-export default Profile;
+export default Profile
 ```
 
 ### Explanation
@@ -133,20 +152,22 @@ export default Profile;
 This is the main entry point that wraps the app with `UserContextProvider`.
 
 ```jsx
-import UserContextProvider from "./context/UserContextProvider";
-import Login from "./components/Login";
-import Profile from "./components/Profile";
+import UserContextProvider from "./context/UsercontextProvider"
+import Login from "./components/Login"
+import Profile from "./components/Profile"
 
 const App = () => {
+
   return (
     <UserContextProvider>
-      <Login />
-      <Profile />
+    <h1>React with Chai</h1>
+    <Login />
+    <Profile />
     </UserContextProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Explanation
@@ -177,6 +198,53 @@ export default App;
 - **Recoil** (easy-to-use state management library for React)
 
 ---
+
+## 🚀 Features
+✅ User authentication using React Context API  
+✅ Persistent login with `localStorage`  
+✅ Simple login and logout functionality  
+
+## 📂 Folder Structure
+```
+📦 project-root
+├── 📂 src
+│   ├── 📂 context
+│   │   ├── UserContext.js
+│   │   ├── UserContextProvider.js
+│   ├── 📂 components
+│   │   ├── Login.js
+│   │   ├── Profile.js
+│   ├── App.js
+│   ├── index.js
+```
+
+## 🔧 Setup Instructions
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/react-context-auth.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd react-context-auth
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+
+## 🎯 How It Works
+1. **User logs in** → Their data is stored in `localStorage`.
+2. **User refreshes page** → Data is loaded from `localStorage`, so they remain logged in.
+3. **User clicks logout** → The user state is cleared and removed from `localStorage`.
+
+## 🛠️ Future Improvements
+- 🔐 Add authentication with Firebase or JWT
+- 🎨 Improve UI with TailwindCSS or Material-UI
+- 🌍 Multi-language support
 
 ## Conclusion
 The React Context API is a powerful tool for managing global state in a React application without prop drilling. It works best for scenarios like themes, authentication, and user preferences. However, for more complex state management, external libraries like Redux might be a better choice.
