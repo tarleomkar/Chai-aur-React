@@ -4,8 +4,6 @@ The React Context API is a way to share data (like state, functions, or configur
 Code Breakdown
 Let’s analyze the code you’ve written:
 
-
-
 import React from "react";
 
 const UserContext = React.createContext();
@@ -209,7 +207,6 @@ import Profile from "./components/Profile"
 const App = () => {
   return (
     <UserContextProvider>
-      <h1>React with Chai and Share is imp</h1>
       <Login />
       <Profile />
     </UserContextProvider>
