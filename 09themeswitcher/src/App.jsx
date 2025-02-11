@@ -5,7 +5,7 @@ import Card from "./components/Card";
 
 const App = () => {
   const [themeMode, setThemeMode] = useState("light");
-
+  
   const lightTheme = () => {
     setThemeMode("light")
   }
