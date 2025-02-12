@@ -87,6 +87,10 @@ npm run dev
 - 🔔 **Notifications & Reminders**
 - 📊 **Stats Dashboard (Completed vs Pending Tasks)**
 
+## UI IMG
+![Vite + React - Brave 11-02-2025 16_29_38](https://github.com/user-attachments/assets/68b62434-6454-4231-865a-4fcae35687f0)
+
+
 ## 📜 License
 This project is **open-source** and available under the **MIT License**.
 
