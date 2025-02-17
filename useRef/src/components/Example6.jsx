@@ -13,7 +13,7 @@ const Example6 = () => {
     }
 
   return (
-    <div>
+    <div> 
         <button onClick={handle}>Click Me</button>
     </div>
   )
