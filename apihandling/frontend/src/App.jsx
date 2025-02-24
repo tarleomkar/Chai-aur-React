@@ -12,20 +12,33 @@ const App = () => {
   const [loading, setLoading] = useState(false)
   const [search, serSearch] = useState('')
 
-  useEffect(() => {
-    (async () => {
+   useEffect(() => {
+    const controller = new AbortController()
+
+    ;(async () => {
       try {
         setLoading(true)
         setError(false)
-        const response = await axios.get('/api/products?search=' + search)
+        const response = await axios.get('/api/products?search=' + search, {
+          signal: controller.signal
+        })
         console.log(response.data);    
         setProducts(response.data)
         setLoading(false)
       } catch (error) {
+        if (axios.isCancel(error)) {
+          console.log('Request canceled', error.message)
+          return
+        }
         setError(true)
+        setLoading(false)
       }
     })()
 
+    // cleanup code
+    return () => {
+      if(!search) controller.abort()
+    }
   }, [search])
 
   if (error) {
@@ -54,7 +67,10 @@ const App = () => {
 
 export default App
 
+// custom react/hook code
+/*
 const customReactQuery = (urlPath) => {
 
   return [products, error, loading]
 }
+*/
