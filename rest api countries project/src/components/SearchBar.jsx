@@ -1,10 +1,16 @@
-import React from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({searchTerm, onSearchChange }) => {
+  // console.log(searchTerm);
+  
   return (
     <div className='search-container'>
         <i className='fa-solid fa-magnifying-glass'></i>
-        <input type="text" placeholder='Search for a country...'/>
+        <input
+        type="text"
+        placeholder='Search for a country...'
+        value={searchTerm}
+        onChange={(e) => onSearchChange(e.target.value)}
+        />
     </div>
   )
 }

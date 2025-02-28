@@ -1,22 +1,25 @@
-import React from "react";
-import Countriesdata from "../../Countriesdata";
-import CountryCard from "./CountryCard";
+// CountriesList.js
+import React from 'react';
+import Countriesdata from '../../Countriesdata';
+import CountryCard from './CountryCard';
 
-const CountriesList = () => {
+const CountriesList = ({ searchTerm }) => {
+  const filteredCountries = Countriesdata.filter((country) =>
+    country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="countries-container">
-      {Countriesdata.map((country) => {
-        return (
-          <CountryCard
-            key={country.name.common}
-            name={country.name.common}
-            flag={country.flags.svg}
-            population={country.population.toLocaleString("en-IN")}
-            region={country.region}
-            capital={country.capital?.[0]}
-          />
-        );
-      })}
+      {filteredCountries.map((country) => (
+        <CountryCard
+          key={country.name.common}
+          name={country.name.common}
+          flag={country.flags.svg}
+          population={country.population.toLocaleString('en-IN')}
+          region={country.region}
+          capital={country.capital?.[0]}
+        />
+      ))}
     </div>
   );
 };

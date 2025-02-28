@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CountryCard = ({name, flag, population, region, capital}) => {
-  console.log(name);
+
   
   return (
     <a className="country-card" href={`/country.html?name=${name.common}`}>
