@@ -11,7 +11,6 @@ const CountriesList = ({ searchTerm, selectedRegion }) => {
   });
 
 
-
   return (
     <div className="countries-container">
       {filteredCountries.map((country) => (
