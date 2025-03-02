@@ -7,6 +7,7 @@ import CountriesList from './components/CountriesList'
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedRegion, setSelectedRegion] = useState('');
 
   return (
     <div>
@@ -14,9 +15,9 @@ const App = () => {
       <main>
       <div className='search-filter-container'>
       <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-      <SelectMenu/>
+      <SelectMenu selectedRegion={selectedRegion} onRegionChange={setSelectedRegion} />
       </div>
-      <CountriesList searchTerm={searchTerm}/>
+      <CountriesList searchTerm={searchTerm} selectedRegion={selectedRegion} />
       </main>
     </div>
   )
