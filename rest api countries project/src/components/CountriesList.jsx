@@ -1,15 +1,15 @@
-// CountriesList.js
 import React from 'react';
 import Countriesdata from '../../Countriesdata.js';
 import CountryCard from './CountryCard';
 
 const CountriesList = ({ searchTerm, selectedRegion }) => {
   const filteredCountries = Countriesdata.filter((country) => {
-    const matchesSearch = country.name.common.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = country.name.common
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
     const matchesRegion = selectedRegion === '' || country.region === selectedRegion;
     return matchesSearch && matchesRegion;
   });
-
 
   return (
     <div className="countries-container">

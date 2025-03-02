@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const CountryCard = ({name, flag, population, region, capital}) => {
-
-  
+const CountryCard = ({ name, flag, population, region, capital }) => {
   return (
-    <a className="country-card" href={`/country.html?name=${name.common}`}>
-      <img src={flag} alt={name + `Flag`} />
+    <a className="country-card" href={`/country.html?name=${name}`}>
+      <img src={flag} alt={`${name} Flag`} />
       <div className="card-text">
         <h3 className="card-title">{name}</h3>
         <p>
@@ -19,7 +17,7 @@ const CountryCard = ({name, flag, population, region, capital}) => {
         </p>
       </div>
     </a>
-  )
-}
+  );
+};
 
-export default CountryCard
+export default CountryCard;

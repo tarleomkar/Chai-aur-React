@@ -3,19 +3,28 @@
 }
 
 body {
+  margin: 0;
+  font-family: Nunito, sans-serif;
+}
+
+/* Define CSS variables based on the app mode */
+.app.light-mode {
   --background-color: white;
   --text-color: black;
   --elements-color: white;
-  margin: 0;
-  font-family: Nunito, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
 
-body.dark {
-  --background-color: hsl(207, 26%, 17%); 
+.app.dark-mode {
+  --background-color: hsl(207, 26%, 17%);
   --text-color: white;
   --elements-color: hsl(209, 23%, 22%);
+}
+
+/* Apply the variables */
+.app {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -23,12 +32,12 @@ main {
 }
 
 a {
-  text-decoration-line: none;
+  text-decoration: none;
   color: inherit;
 }
 
 .header-container {
-  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   padding-inline: 24px;
   background-color: var(--elements-color);
 }
@@ -51,11 +60,10 @@ a {
 
 .countries-container {
   max-width: 1200px;
-  margin-top: 16px;
+  margin: 16px auto 0;
   display: flex;
   gap: 64px;
   flex-wrap: wrap;
-  margin-inline: auto;
   justify-content: space-between;
 }
 
@@ -65,19 +73,19 @@ a {
   border-radius: 8px;
   overflow: hidden;
   padding-bottom: 24px;
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   background-color: var(--elements-color);
 }
 
 .country-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
   font-size: 24px;
-  margin-block: 16px;
+  margin: 16px 0;
 }
 
 .card-text {
@@ -85,32 +93,27 @@ a {
 }
 
 .card-text p {
-  margin-block: 8px;
+  margin: 8px 0;
 }
 
 .country-card img {
   width: 100%;
 }
 
-
 .search-filter-container {
   max-width: 1200px;
-  margin-inline: auto;
-  margin-top: 16px;
-  margin-bottom: 48px;
+  margin: 16px auto 48px;
   display: flex;
   justify-content: space-between;
   gap: 24px;
 }
 
 .search-container {
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   max-width: 350px;
   width: 100%;
   border-radius: 4px;
   padding-left: 24px;
-  color: #999;
-  overflow: hidden;
   background-color: var(--elements-color);
   color: var(--text-color);
 }
@@ -133,27 +136,26 @@ a {
   padding: 16px;
   border: none;
   outline: none;
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--elements-color);
   color: var(--text-color);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .countries-container {
-      justify-content: center;
+    justify-content: center;
   }
 
   .title {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .header-content p {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   .search-filter-container {
-      flex-direction: column;
+    flex-direction: column;
   }
-  
 }

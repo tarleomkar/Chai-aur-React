@@ -1,4 +1,3 @@
-// SelectMenu.js
 import React from 'react';
 
 const SelectMenu = ({ selectedRegion, onRegionChange }) => {
