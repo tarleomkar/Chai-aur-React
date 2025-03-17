@@ -15,7 +15,7 @@ const App = () => {
       setWarning(true);
       setTimeout(() => setWarning(false), 2000);
       return;
-    }
+    } 
     setCart([...cart, { ...item, qty: 1 }]);
   };
 
