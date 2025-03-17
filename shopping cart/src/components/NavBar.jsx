@@ -2,7 +2,7 @@ import React from "react";
 import { ImageOff, ShoppingCart } from 'lucide-react';
 import '../styles/navbar.css'
 
-const NavBar = () => {
+const NavBar = ({ size }) => {
   return (
     <nav>
       <div className="nav_box">
@@ -13,7 +13,7 @@ const NavBar = () => {
           <span>
             <ShoppingCart />
           </span>
-          <span>0</span>
+          <span>{size}</span>
         </div>
       </div>
     </nav>
