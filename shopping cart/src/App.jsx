@@ -1,31 +1,36 @@
-import React, { useState } from 'react'
-import NavBar from './components/NavBar'
-import Shop from './components/Shop'
-import './App.css'
+import React, { useState } from 'react';
+import NavBar from './components/NavBar';
+import Shop from './components/Shop';
+import './App.css';
+import Cart from './components/Cart';
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [warning, setWarning] = useState(false)
+  const [warning, setWarning] = useState(false);
+  const [show, setShow] = useState(true);
 
   const handleClick = (item) => {
-    if(cart.some((product) => product.id === item.id)) {
+    const existingItem = cart.find(product => product.id === item.id);
+    if (existingItem) {
       setWarning(true);
-      setTimeout(() => setWarning(false), 2000)
-      return
+      setTimeout(() => setWarning(false), 2000);
+      return;
     }
-    setCart((prevCart) => [...prevCart, item])
-  }
+    setCart([...cart, { ...item, qty: 1 }]);
+  };
 
   return (
     <div>
-    <NavBar size={cart.length} />
-    <Shop handleClick={handleClick} />
-    {warning && 
-    <div className='warning'>
-    Item is already present in your Cart  
-    </div>}
-    </div>
-  )
-}
+      <NavBar size={cart.length} setShow={setShow} />
+      {show ? <Shop handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} />}
 
-export default App
+      {warning && (
+        <div className='warning'>
+          Item is already present in your Cart
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default App;
