@@ -4,7 +4,7 @@ const list = [
       title: "Panda",
       author: "by Rebecca Smith | 14 Dec 2021",
       price: 234,
-      img: "https://source.unsplash.com/400x300/?panda",
+      img: "https://cdn.pixabay.com/photo/2016/03/04/22/54/animal-1236875_1280.jpg",
       amount: 1,
     },
     {
@@ -12,7 +12,7 @@ const list = [
       title: "Tiger",
       author: "by John Doe | 10 Jan 2022",
       price: 299,
-      img: "https://source.unsplash.com/400x300/?tiger",
+      img: "https://cdn.pixabay.com/photo/2023/03/30/18/27/animal-7888465_1280.jpg",
       amount: 1,
     },
     {
@@ -20,7 +20,7 @@ const list = [
       title: "Mountain",
       author: "by Alice Brown | 05 Feb 2022",
       price: 180,
-      img: "https://source.unsplash.com/400x300/?mountain",
+      img: "https://cdn.pixabay.com/photo/2023/12/06/08/41/mountain-8433234_1280.jpg",
       amount: 1,
     },
     {
@@ -28,7 +28,7 @@ const list = [
       title: "Sunset",
       author: "by Mark Wilson | 22 Mar 2022",
       price: 220,
-      img: "https://source.unsplash.com/400x300/?sunset",
+      img: "https://cdn.pixabay.com/photo/2023/12/20/07/04/sunset-8459057_1280.jpg",
       amount: 1,
     },
     {
@@ -36,7 +36,7 @@ const list = [
       title: "Beach",
       author: "by Sarah Connor | 12 Apr 2022",
       price: 210,
-      img: "https://source.unsplash.com/400x300/?beach",
+      img: "https://cdn.pixabay.com/photo/2023/07/08/04/58/sunset-8113697_1280.jpg",
       amount: 1,
     },
     {
@@ -44,7 +44,7 @@ const list = [
       title: "Cityscape",
       author: "by David Lee | 30 May 2022",
       price: 250,
-      img: "https://source.unsplash.com/400x300/?city",
+      img: "https://cdn.pixabay.com/photo/2023/07/11/08/50/fireworks-8119898_1280.jpg",
       amount: 1,
     },
     {
@@ -52,7 +52,7 @@ const list = [
       title: "Books",
       author: "by Emily Johnson | 07 Jun 2022",
       price: 175,
-      img: "https://source.unsplash.com/400x300/?books",
+      img: "https://cdn.pixabay.com/photo/2018/07/01/20/01/music-3510326_1280.jpg",
       amount: 1,
     },
     {
@@ -60,7 +60,7 @@ const list = [
       title: "Coffee",
       author: "by Alex Martin | 19 Jul 2022",
       price: 130,
-      img: "https://source.unsplash.com/400x300/?coffee",
+      img: "hhttps://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg",
       amount: 1,
     },
     {
@@ -68,7 +68,7 @@ const list = [
       title: "Bicycle",
       author: "by Michael Scott | 23 Aug 2022",
       price: 145,
-      img: "https://source.unsplash.com/400x300/?bicycle",
+      img: "https://cdn.pixabay.com/photo/2020/04/07/13/12/bicycle-5013316_1280.jpg",
       amount: 1,
     },
     {
@@ -76,7 +76,7 @@ const list = [
       title: "Rainforest",
       author: "by Olivia White | 14 Sep 2022",
       price: 270,
-      img: "https://source.unsplash.com/400x300/?rainforest",
+      img: "https://cdn.pixabay.com/photo/2019/07/20/14/29/rainforest-4350845_1280.jpg",
       amount: 1,
     },
     {
@@ -84,7 +84,7 @@ const list = [
       title: "Galaxy",
       author: "by Brian Adams | 03 Oct 2022",
       price: 290,
-      img: "https://source.unsplash.com/400x300/?galaxy",
+      img: "https://cdn.pixabay.com/photo/2017/08/10/00/40/stars-2616537_1280.jpg",
       amount: 1,
     },
     {
@@ -92,7 +92,7 @@ const list = [
       title: "Dogs",
       author: "by Sophia Carter | 18 Nov 2022",
       price: 199,
-      img: "https://source.unsplash.com/400x300/?dog",
+      img: "https://cdn.pixabay.com/photo/2014/08/21/14/51/dog-423398_1280.jpg",
       amount: 1,
     },
     {
@@ -100,7 +100,7 @@ const list = [
       title: "Cats",
       author: "by Ethan Brown | 25 Dec 2022",
       price: 195,
-      img: "https://source.unsplash.com/400x300/?cat",
+      img: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg",
       amount: 1,
     },
     {
@@ -108,7 +108,7 @@ const list = [
       title: "Flowers",
       author: "by Ava Green | 02 Jan 2023",
       price: 155,
-      img: "https://source.unsplash.com/400x300/?flowers",
+      img: "https://cdn.pixabay.com/photo/2023/09/23/14/22/dahlia-8271071_1280.jpg",
       amount: 1,
     },
     {
@@ -116,7 +116,7 @@ const list = [
       title: "Space",
       author: "by Liam Miller | 10 Feb 2023",
       price: 310,
-      img: "https://source.unsplash.com/400x300/?space",
+      img: "https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188_1280.jpg",
       amount: 1,
     },
     {
@@ -124,7 +124,7 @@ const list = [
       title: "Desert",
       author: "by Harper Wilson | 22 Mar 2023",
       price: 190,
-      img: "https://source.unsplash.com/400x300/?desert",
+      img: "https://cdn.pixabay.com/photo/2021/08/27/10/27/desert-6578359_1280.jpg",
       amount: 1,
     },
     {
@@ -132,7 +132,7 @@ const list = [
       title: "Bridge",
       author: "by Noah Anderson | 15 Apr 2023",
       price: 260,
-      img: "https://source.unsplash.com/400x300/?bridge",
+      img: "https://cdn.pixabay.com/photo/2023/10/03/09/59/bridge-8291058_1280.jpg",
       amount: 1,
     },
     {
@@ -140,7 +140,7 @@ const list = [
       title: "Forest",
       author: "by Isabella Hall | 27 May 2023",
       price: 215,
-      img: "https://source.unsplash.com/400x300/?forest",
+      img: "https://cdn.pixabay.com/photo/2021/10/08/07/13/autumn-6690466_1280.jpg",
       amount: 1,
     },
     {
@@ -148,7 +148,7 @@ const list = [
       title: "Lake",
       author: "by Mason Young | 12 Jun 2023",
       price: 240,
-      img: "https://source.unsplash.com/400x300/?lake",
+      img: "https://cdn.pixabay.com/photo/2021/11/11/14/37/lake-6786472_1280.jpg",
       amount: 1,
     },
     {
@@ -156,7 +156,7 @@ const list = [
       title: "Castle",
       author: "by Charlotte Scott | 08 Jul 2023",
       price: 350,
-      img: "https://source.unsplash.com/400x300/?castle",
+      img: "https://cdn.pixabay.com/photo/2016/11/29/04/13/castle-1867262_1280.jpg",
       amount: 1,
     }
   ];
