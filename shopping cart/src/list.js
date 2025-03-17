@@ -60,7 +60,7 @@ const list = [
       title: "Coffee",
       author: "by Alex Martin | 19 Jul 2022",
       price: 130,
-      img: "hhttps://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg",
+      img: "https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg",
       amount: 1,
     },
     {
